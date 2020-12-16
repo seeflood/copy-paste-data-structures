@@ -1,6 +1,9 @@
 # Copy-Paste Data Structures
 Advanced data structures which can be easily copy-pasted into your project. 
 
+一个java的高级数据结构库，设计目标是任何数据结构都能单独复制粘贴出来、单独使用，文件和文件之间没有任何互相依赖，以便在打online-judge比赛（比如leetcode周赛，google比赛）的时候能够直接粘贴使用，或者把某个数据结构粘贴到自己的工作项目中做魔改。
+准备加一些Go写的数据结构
+
 ## Design Goals
 
 ### Online-Judge Ready
