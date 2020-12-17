@@ -4,7 +4,10 @@ import (
 	"testing"
 )
 
-func TestCase1(t *testing.T) {
+/**
+用线段树解决Leetcode 307题
+*/
+func TestCaseLeetcode307(t *testing.T) {
 	nums := [...]int{1, 3, 5}
 	obj := Constructor(nums[:])
 	r := obj.SumRange(0, 2)
