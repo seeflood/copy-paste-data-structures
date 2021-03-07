@@ -7,8 +7,9 @@ type Set interface {
 	Add(e interface{}) bool
 	Remove(e interface{})
 	Clear()
+	ForEach(f func(e interface{}))
+	Filter(predicate func(e interface{}) bool) Set
 }
-
 type HashSet struct {
 	m map[interface{}]struct{}
 }
@@ -46,4 +47,21 @@ func (set *HashSet) Add(e interface{}) bool {
 
 func (set *HashSet) Remove(e interface{}) {
 	delete(set.m, e)
+}
+
+func (set *HashSet) ForEach(f func(e interface{})) {
+	for k, _ := range set.m {
+		f(k)
+	}
+}
+
+func (set *HashSet) Filter(predicate func(e interface{}) bool) Set {
+	result := NewHashSet()
+	for k, _ := range set.m {
+		if predicate(k) {
+			result.Add(k)
+		}
+	}
+
+	return result
 }
