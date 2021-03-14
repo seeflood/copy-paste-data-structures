@@ -1,6 +1,8 @@
-package heap
+package slice_heap
 
-import "container/heap"
+import (
+	"container/heap"
+)
 
 type Comparator interface {
 	compare(a interface{}, b interface{}) int
@@ -17,6 +19,22 @@ func NewSliceHeap(c Comparator) *SliceHeap {
 	}
 	heap.Init(h)
 	return h
+}
+
+func NewIntSliceHeap() *SliceHeap {
+	h := &SliceHeap{
+		make([]interface{}, 0),
+		&IntComparator{},
+	}
+	heap.Init(h)
+	return h
+}
+
+type IntComparator struct {
+}
+
+func (*IntComparator) compare(a interface{}, b interface{}) int {
+	return a.(int) - b.(int)
 }
 
 func (h *SliceHeap) IsEmpty() bool {
@@ -36,4 +54,11 @@ func (h *SliceHeap) Pop() interface{} {
 	x := old[n-1]
 	h.slice = old[0 : n-1]
 	return x
+}
+
+func Peek(h *SliceHeap) interface{} {
+	if h.IsEmpty() {
+		return nil
+	}
+	return h.slice[0]
 }
