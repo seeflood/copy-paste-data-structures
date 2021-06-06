@@ -20,8 +20,25 @@ Adding a new open-source project into the private maven repository in a big comp
 
 So copy-paste a data structure into your project can be another choice,especially when you want to make some change to the data structure.
 
+## Examples For Golang
+- deque
+  - [linked_list](go/pkg/deque/linked_list_test.go)
+  - [slice_deque](go/pkg/deque/slice_deque_test.go)
+- heap
+  - [int_heap](go/pkg/heap/int_heap_test.go)
+  - [slice_heap](go/pkg/heap/slice_heap_test.go)
+- set
+  - [bit_set](go/pkg/set/bit_set_test.go)
+  - [hash_set](go/pkg/set/hash_set_test.go)
+- map
+  - [lru_cache](go/pkg/map/test/lru_cache_leetcode146_test.go)
+- [union find](go/pkg/union_find/union_find_test.go)
+- tree
+  - [trie](go/pkg/tree/trie_test.go)
+  - [segment tree](go/pkg/tree/segment/segment_tree_test.go)
+  - [cartesian tree](go/pkg/tree/cartesian/cartesian_tree_test.go)
 
-## Examples
+## Examples For Java
 You can check unit tests in /test/ directory as examples.
 
 ### Cartesian Tree Example
@@ -99,3 +116,4 @@ Code using segment tree to solve the problem [leetcode-307](https://leetcode-cn.
 ```
 
 you can check the submiss [here](https://leetcode-cn.com/submissions/detail/121850298/)
+

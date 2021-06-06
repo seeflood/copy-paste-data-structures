@@ -1,4 +1,4 @@
-package copy_paste_ds
+package union_find
 
 type UnionFind struct {
 	n          int
