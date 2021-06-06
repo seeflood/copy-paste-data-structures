@@ -8,7 +8,7 @@ Advanced data structures in Go and Java,which can be easily copy-pasted into you
 ### Online-Judge Ready
 Users can copy any single data structure(e.g. segment tree) into their solution codes for online-judge(like leetcode) without import any other files.
 
-To achieve this goal,any file in this project imports nothing but those in jdk,and there are no depandency relationship between files in this project. 
+To achieve this goal,any file in this project imports nothing but those in standard library,and there is no depandency relationship between files in this project. 
 
 ### Copy-Paste Ready
 
@@ -18,7 +18,7 @@ As a SDE in a tech company,I used to copy-paste a trie into my project to solve 
 
 Adding a new open-source project into the private maven repository in a big company might not be that easy,because you always have to persuade lots of leaders to make approval.
 
-So copy-paste a data structure into your project can be another choice,especially when you want to make some change to the data structure.
+So copy-paste a data structure into your project can be another choice,especially when you want to make some changes to the data structure.
 
 ## Examples For Golang
 - deque
