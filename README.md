@@ -39,7 +39,7 @@ So copy-paste a data structure into your project can be another choice,especiall
   - [cartesian tree](go/pkg/tree/cartesian/cartesian_tree_test.go)
 
 ## Examples For Java
-You can check unit tests in /test/ directory as examples.
+You can check unit tests in [test directory](java/src/test) as examples.
 
 ### Cartesian Tree Example
 Let's take [leetcode-1526](https://leetcode-cn.com/problems/minimum-number-of-increments-on-subarrays-to-form-a-target-array/) as an example,we can use cartesian-tree to solve it.
@@ -115,5 +115,4 @@ Code using segment tree to solve the problem [leetcode-307](https://leetcode-cn.
 
 ```
 
-you can check the submiss [here](https://leetcode-cn.com/submissions/detail/121850298/)
 
