@@ -115,4 +115,6 @@ Code using segment tree to solve the problem [leetcode-307](https://leetcode-cn.
 
 ```
 
+## Examples For Javascript
 
+TODO
