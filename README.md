@@ -1,3 +1,9 @@
+<a href="foo-full_res.png"><picture>
+  <source srcset="foo-dark.png" media="(prefers-color-scheme: dark)" />
+  <source srcset="foo-light.png" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
+  <img src="foo-light.png" />
+</picture></a>
+
 # Copy-Paste Data Structures
 Advanced data structures in Go and Java,which can be easily copy-pasted into your project or competitive programming code.
 
