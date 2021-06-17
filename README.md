@@ -1,7 +1,7 @@
 <a href="foo-full_res.png"><picture>
-  <source srcset="foo-dark.png" media="(prefers-color-scheme: dark)" />
-  <source srcset="foo-light.png" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
-  <img src="foo-light.png" />
+  <source srcset="1.png" media="(prefers-color-scheme: dark)" />
+  <source srcset="2.png" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
+  <img src="2.png" />
 </picture></a>
 
 # Copy-Paste Data Structures
