@@ -28,6 +28,7 @@ here:
 4. configurate the hotkey for snippets
 
 ![img_4.png](img_4.png)
+
 5. After saving the configuration,press the hotkey for snippets!
    
 ![img.png](img.png)
