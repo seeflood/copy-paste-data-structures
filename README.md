@@ -1,19 +1,36 @@
-[comment]: <> (<a href="foo-full_res.png"><picture>)
-
-[comment]: <> (  <source srcset="1.jpg" media="&#40;prefers-color-scheme: dark&#41;" />)
-
-[comment]: <> (  <source srcset="2.jpeg" media="&#40;prefers-color-scheme: light&#41;, &#40;prefers-color-scheme: no-preference&#41;" />)
-
-[comment]: <> (  <img src="2.jpeg" />)
-
-[comment]: <> (</picture></a>)
-
 # Copy-Paste Data Structures
 Advanced data structures in Go and Java,which can be easily copy-pasted into your project or competitive programming code.
 
 chinese:
 
 >一个java和Go的高级数据结构库，设计目标是任何数据结构都能单独复制粘贴出来、单独使用，文件和文件之间没有任何互相依赖，以便在打online-judge比赛（比如leetcode周赛，google比赛）的时候能够直接粘贴使用，或者把某个数据结构粘贴到自己的工作项目中做魔改。
+
+## Demo:Use it with Clipy(macOS) or Clipx(Windows)
+![Demo](show-clipy.gif)
+
+![img.png](img.png)
+
+## Install
+1. install [Clipy(for macOS)](https://clipy-app.com/) or [Clipx(for Windows)](https://en.wikipedia.org/wiki/ClipX)
+
+2. download this repo
+```shell
+git clone https://github.com/seeflood/copy-paste-data-structures.git
+```
+3. copy code in this repo into Clipy's config
+
+e.g. copy code in java/src/main/java/io/github/seeflood/advanced/ds/CartesianTree.java
+and code in java/src/test/java/io/github/seeflood/advanced/ds/CartesianTreeTest.java
+here:
+
+![img_2.png](img_2.png)
+
+4. configurate the hotkey for snippets
+
+![img_4.png](img_4.png)
+5. After saving the configuration,press the hotkey for snippets!
+   
+![img.png](img.png)
 
 ## Examples For Golang
 - deque
