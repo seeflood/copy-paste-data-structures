@@ -1,30 +1,36 @@
-<a href="foo-full_res.png"><picture>
-  <source srcset="1.jpg" media="(prefers-color-scheme: dark)" />
-  <source srcset="2.jpeg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
-  <img src="2.jpeg" />
-</picture></a>
-
 # Copy-Paste Data Structures
 Advanced data structures in Go and Java,which can be easily copy-pasted into your project or competitive programming code.
 
-一个java和Go的高级数据结构库，设计目标是任何数据结构都能单独复制粘贴出来、单独使用，文件和文件之间没有任何互相依赖，以便在打online-judge比赛（比如leetcode周赛，google比赛）的时候能够直接粘贴使用，或者把某个数据结构粘贴到自己的工作项目中做魔改。
+chinese:
 
-## Design Goals
+>一个java和Go的高级数据结构库，设计目标是任何数据结构都能单独复制粘贴出来、单独使用，文件和文件之间没有任何互相依赖，以便在打online-judge比赛（比如leetcode周赛，google比赛）的时候能够直接粘贴使用，或者把某个数据结构粘贴到自己的工作项目中做魔改。
 
-### Online-Judge Ready
-Users can copy any single data structure(e.g. segment tree) into their solution codes for online-judge(like leetcode) without import any other files.
+## Demo:Use it with Clipy(macOS) or Clipx(Windows)
+![Demo](show-clipy.gif)
 
-To achieve this goal,any file in this project imports nothing but those in standard library,and there is no depandency relationship between files in this project. 
+![img.png](img.png)
 
-### Copy-Paste Ready
+## Install
+1. install [Clipy(for macOS)](https://clipy-app.com/) or [Clipx(for Windows)](https://en.wikipedia.org/wiki/ClipX)
 
+2. download this repo
+```shell
+git clone https://github.com/seeflood/copy-paste-data-structures.git
+```
+3. copy code in this repo into Clipy's config
 
-### Production Ready
-As a SDE in a tech company,I used to copy-paste a trie into my project to solve a business problem,because in that case the Trie in Apache-Common-Collections didn't fit the situation.
+e.g. copy code in java/src/main/java/io/github/seeflood/advanced/ds/CartesianTree.java
+and code in java/src/test/java/io/github/seeflood/advanced/ds/CartesianTreeTest.java
+here:
 
-Adding a new open-source project into the private maven repository in a big company might not be that easy,because you always have to persuade lots of leaders to make approval.
+![img_2.png](img_2.png)
 
-So copy-paste a data structure into your project can be another choice,especially when you want to make some changes to the data structure.
+4. configurate the hotkey for snippets
+
+![img_4.png](img_4.png)
+5. After saving the configuration,press the hotkey for snippets!
+   
+![img.png](img.png)
 
 ## Examples For Golang
 - deque
@@ -121,6 +127,19 @@ Code using segment tree to solve the problem [leetcode-307](https://leetcode-cn.
 
 ```
 
-## Examples For Javascript
+## Design Goals
 
-TODO
+### Online-Judge Ready
+Users can copy any single data structure(e.g. segment tree) into their solution codes for online-judge(like leetcode) without import any other files.
+
+To achieve this goal,any file in this project imports nothing but those in standard library,and there is no depandency relationship between files in this project.
+
+### Copy-Paste Ready
+
+
+### Production Ready
+As a SDE in a tech company,I used to copy-paste a trie into my project to solve a business problem,because in that case the Trie in Apache-Common-Collections didn't fit the situation.
+
+Adding a new open-source project into the private maven repository in a big company might not be that easy,because you always have to persuade lots of leaders to make approval.
+
+So copy-paste a data structure into your project can be another choice,especially when you want to make some changes to the data structure.
