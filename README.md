@@ -53,6 +53,8 @@ here:
 
 ## Examples For Java
 You can check unit tests in [test directory](java/src/test) as examples.
+- map
+  - [LRUCache](java/src/test/java/io/github/seeflood/advanced/ds/map/LRUCacheTest.java)
 - union find
   - [IntUnionFind](java/src/test/java/io/github/seeflood/advanced/ds/unionfind/IntUnionFindTest.java)
   - [FixedSizeUnionFind](java/src/test/java/io/github/seeflood/advanced/ds/unionfind/FixedSizeUnionFindTest.java)
