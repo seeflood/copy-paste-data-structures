@@ -1,12 +1,9 @@
 package io.github.seeflood.advanced.ds;
 
-import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class CartesianTreeTest extends TestCase {
-
-
+public class CartesianTreeTest {
     @Test
     public void testConstruct(){
         Integer[]arr=new Integer[]{1,2,3};

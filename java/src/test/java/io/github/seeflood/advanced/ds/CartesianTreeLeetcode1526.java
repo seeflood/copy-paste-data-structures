@@ -21,7 +21,7 @@ public class CartesianTreeLeetcode1526 {
                 arr[i] = target[i];
             }
             CartesianTree<Integer> tree = new CartesianTree<>(arr);
-//            dfs
+            //            dfs
             CartesianTree.Node root = tree.getRoot();
             dfs(root, 0);
             return total;

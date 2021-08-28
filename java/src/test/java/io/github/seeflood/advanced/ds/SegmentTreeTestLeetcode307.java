@@ -1,6 +1,5 @@
 package io.github.seeflood.advanced.ds;
 
-
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -10,7 +9,7 @@ import org.junit.Test;
 public class SegmentTreeTestLeetcode307 {
 
 
-    class NumArray {
+    public static class NumArray {
         SegmentTree<Integer> tree;
 
         public NumArray(int[] nums) {

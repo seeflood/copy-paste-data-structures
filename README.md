@@ -53,6 +53,14 @@ here:
 
 ## Examples For Java
 You can check unit tests in [test directory](java/src/test) as examples.
+- union find
+  - [IntUnionFind](java/src/test/java/io/github/seeflood/advanced/ds/unionfind/IntUnionFindTest.java)
+  - [FixedSizeUnionFind](java/src/test/java/io/github/seeflood/advanced/ds/unionfind/FixedSizeUnionFindTest.java)
+- tree
+  - [Trie](java/src/test/java/io/github/seeflood/advanced/ds/TrieTest.java)
+  - [SegmentTree](java/src/test/java/io/github/seeflood/advanced/ds/SegmentTreeTestLeetcode307.java)
+  - [CartesianTree](java/src/test/java/io/github/seeflood/advanced/ds/CartesianTreeTest.java)
+
 
 ### Cartesian Tree Example
 Let's take [leetcode-1526](https://leetcode-cn.com/problems/minimum-number-of-increments-on-subarrays-to-form-a-target-array/) as an example,we can use cartesian-tree to solve it.

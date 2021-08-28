@@ -1,13 +1,12 @@
-package io.github.seeflood.advanced.ds;
+package io.github.seeflood.advanced.ds.unionfind;
 
-import io.github.seeflood.advanced.ds.impl.FixedSizeUnionFind;
-import junit.framework.TestCase;
 import org.junit.Assert;
+import org.junit.Test;
 
-public class FixedSizeUnionFindTest extends TestCase {
-
+public class FixedSizeUnionFindTest {
+    @Test
     public void testUnionFind() {
-        UnionFind<String> uf = new FixedSizeUnionFind<>(10);
+        FixedSizeUnionFind<String> uf = new FixedSizeUnionFind<>(10);
         uf.union("a","b");
         uf.union("c","d");
         uf.union("e","f");

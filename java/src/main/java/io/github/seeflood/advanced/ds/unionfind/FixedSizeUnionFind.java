@@ -1,11 +1,24 @@
-package io.github.seeflood.advanced.ds.impl;
-
-import io.github.seeflood.advanced.ds.UnionFind;
+package io.github.seeflood.advanced.ds.unionfind;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class FixedSizeUnionFind<T> implements UnionFind<T> {
+// public interface UnionFind<T> {
+//
+//    void union(T a,T b);
+//
+//    /**
+//     * find root
+//     * @param a
+//     * @return
+//     */
+//    T findRoot(T a);
+//
+//    boolean connected(T a,T b);
+//
+//    int countComponents();
+//}
+public class FixedSizeUnionFind<T> {
     int n;
     int components;
     int[] father;
@@ -25,7 +38,6 @@ public class FixedSizeUnionFind<T> implements UnionFind<T> {
         }
     }
 
-    @Override
     public void union(T a, T b) {
         int aRoot = findRootIdx(a);
         int bRoot = findRootIdx(b);
@@ -42,13 +54,11 @@ public class FixedSizeUnionFind<T> implements UnionFind<T> {
         components--;
     }
 
-    @Override
     public T findRoot(T a) {
         int rootIdx = findRootIdx(a);
         return (T) idxToElm[rootIdx];
     }
 
-    @Override
     public boolean connected(T a, T b) {
         return findRootIdx(a) == findRootIdx(b);
     }
@@ -77,7 +87,6 @@ public class FixedSizeUnionFind<T> implements UnionFind<T> {
         return i;
     }
 
-    @Override
     public int countComponents() {
         return components - (n - elmToIdx.size());
     }
