@@ -11,11 +11,11 @@ import java.util.Deque;
  */
 public class CartesianTree<T> {
     public static class Node<T> {
-        private int from = -1;
-        private int to = -1;
-        private int idx = -1;
-        private T value = null;
-        private Node<T> left = null, right = null;
+        private int     from  = -1;
+        private int     to    = -1;
+        private int     idx   = -1;
+        private T       value = null;
+        private Node<T> left  = null, right = null;
 
         public Node(int idx, T value, int from, int to) {
             this.idx = idx;
@@ -87,12 +87,11 @@ public class CartesianTree<T> {
         }
     };
 
-    T[] arr;
+    T[]  arr;
     Node dummy = new Node();
 
     /**
-     * Build Cartesian Tree,e.g. arr=[5,2,3,1,4],
-     * then tree will look like:<br>
+     * Build Cartesian Tree,e.g. arr=[5,2,3,1,4], then tree will look like:<br>
      * <pre>
      *          1
      *      2       4
@@ -108,8 +107,7 @@ public class CartesianTree<T> {
     }
 
     /**
-     * Build Cartesian Tree,e.g. arr=[5,2,3,1,4],
-     * then tree will look like:<br>
+     * Build Cartesian Tree,e.g. arr=[5,2,3,1,4], then tree will look like:<br>
      * <pre>
      *          1
      *      2       4
@@ -130,13 +128,14 @@ public class CartesianTree<T> {
         if (arr.length == 0) {
             throw new IllegalArgumentException("arr is empty,can't build a tree on it.");
         }
-        //         build tree with stack
+        //   build tree with stack
+        //  see https://oi-wiki.org/ds/cartesian-tree/#_2
         dummy.right = new Node(0, arr[0]);
         Deque<Node<T>> stack = new ArrayDeque<>();
         stack.addLast(dummy.right);
         int n = arr.length;
         for (int i = 1; i < n; i++) {
-//            walk up stack to find smaller node
+            //   walk up stack to find smaller node
             Node<T> prev = null;
             while (!stack.isEmpty() && comparator.compare(stack.peekLast().value, arr[i]) > 0) {
                 prev = stack.pollLast();
@@ -144,14 +143,14 @@ public class CartesianTree<T> {
             Node<T> toAdd = new Node<>(i, arr[i]);
             if (!stack.isEmpty()) {
                 stack.peekLast().right = toAdd;
-            }else{
-                dummy.right=toAdd;
+            } else {
+                dummy.right = toAdd;
             }
             stack.addLast(toAdd);
             toAdd.left = prev;
         }
 
-//       lazy add range index
+        // lazy add range index
         dummy.right.from = 0;
         dummy.right.to = n - 1;
     }
