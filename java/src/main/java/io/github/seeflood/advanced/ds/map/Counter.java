@@ -1,6 +1,7 @@
 package io.github.seeflood.advanced.ds.map;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -9,7 +10,7 @@ import java.util.Map;
  *
  * @param <T>
  */
-public class Counter<T> {
+public class Counter<T> implements Iterable<T> {
     private Map<T, Integer> m = new HashMap<>();
 
     public Counter() {
@@ -38,28 +39,28 @@ public class Counter<T> {
      * @return counter value after this addition
      */
     public int add(T t) {
-        return doAdd(t, 1);
+        return add(t, 1);
     }
 
-    private int doAdd(T t, int diff) {
+    public int add(T key, int diff) {
         int c;
-        if (!m.containsKey(t)) {
+        if (!m.containsKey(key)) {
             c = diff;
         } else {
-            c = m.get(t) + diff;
+            c = m.get(key) + diff;
         }
-        m.put(t, c);
+        m.put(key, c);
         return c;
     }
 
     /**
-     * counter-1.  It can be negtive after substraction
+     * counter-1.  It can be negative after substraction
      *
      * @param t
      * @return counter value after this operation
      */
     public int substract(T t) {
-        return doAdd(t, -1);
+        return add(t, -1);
     }
 
     public int get(T t) {
@@ -67,5 +68,10 @@ public class Counter<T> {
             return 0;
         }
         return m.get(t);
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        return m.keySet().iterator();
     }
 }
