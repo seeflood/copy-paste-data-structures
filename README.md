@@ -54,6 +54,7 @@ here:
 ## Examples For Java
 You can check unit tests in [test directory](java/src/test) as examples.
 - map
+  - [Counter](java/src/test/java/io/github/seeflood/advanced/ds/map/CounterTest.java)
   - [LRUCache](java/src/test/java/io/github/seeflood/advanced/ds/map/LRUCacheTest.java)
   - [LFUCache](java/src/test/java/io/github/seeflood/advanced/ds/map/LFUCacheTest.java)
 - union find
